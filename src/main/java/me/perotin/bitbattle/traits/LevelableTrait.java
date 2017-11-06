@@ -1,7 +1,5 @@
 package me.perotin.bitbattle.traits;
 
-import org.bukkit.entity.Player;
-
 public interface LevelableTrait extends Trait {
 
     int getLevel();
@@ -10,5 +8,5 @@ public interface LevelableTrait extends Trait {
 
     boolean hasNextLevel();
 
-    void levelUp(Player player);
+    void levelUp();
 }

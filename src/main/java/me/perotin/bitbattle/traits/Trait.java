@@ -1,10 +1,8 @@
 package me.perotin.bitbattle.traits;
 
-import org.bukkit.entity.Player;
-
 public interface Trait {
 
-    void apply(Player player);
+    void apply();
 
-    void retract(Player player);
+    void retract();
 }

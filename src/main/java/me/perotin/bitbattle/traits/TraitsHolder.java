@@ -1,10 +1,13 @@
 package me.perotin.bitbattle.traits;
 
+import org.bukkit.entity.Player;
+
 import java.util.Optional;
+import java.util.function.Function;
 
 public interface TraitsHolder {
 
-    void applyTrait(Trait trait);
+    <T extends Trait> void applyTrait(Function<Player, Trait> traitCreator);
 
     <T extends Trait> void retractTrait(Class<T> traitType);
 

@@ -1,9 +1,5 @@
 package me.perotin.bitbattle;
 
-import me.perotin.bitbattle.traits.Trait;
-
-import java.util.Optional;
-
 public interface BitPlayer {
 
     double getHealth();
@@ -14,8 +10,4 @@ public interface BitPlayer {
     double getMaxHealth();
 
     void setMaxHealth();
-
-    void apply(Trait trait);
-
-    <T extends Trait> Optional<T> getTrait(Class<T> traitType);
 }

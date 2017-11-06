@@ -8,5 +8,7 @@ public interface LevelableTrait extends Trait {
 
     int getMaxLevel();
 
+    boolean hasNextLevel();
+
     void levelUp(Player player);
 }

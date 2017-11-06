@@ -4,7 +4,11 @@ import java.util.Optional;
 
 public interface TraitsHolder {
 
-    void apply(Trait trait);
+    void applyTrait(Trait trait);
+
+    <T extends Trait> void retractTrait(Class<T> traitType);
+
+    void retractAllTraits();
 
     <T extends LevelableTrait> void levelUpTrait(Class<T> traitType);
 

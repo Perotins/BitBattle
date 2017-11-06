@@ -1,10 +1,13 @@
 package me.perotin.bitbattle.traits;
 
-public abstract class AbstractLevelableTrait implements LevelableTrait {
-    protected int level;
-    protected final int maxLevel;
+import java.util.UUID;
 
-    protected AbstractLevelableTrait(int maxLevel) {
+public abstract class AbstractLevelableTrait extends AbstractTrait implements LevelableTrait {
+    private int level;
+    private final int maxLevel;
+
+    protected AbstractLevelableTrait(UUID playerId, int maxLevel) {
+        super(playerId);
         this.level = 1;
         this.maxLevel = maxLevel;
     }
@@ -27,7 +30,7 @@ public abstract class AbstractLevelableTrait implements LevelableTrait {
     @Override
     public final void levelUp() {
         if (!hasNextLevel()) {
-            //TODO: Throw exception
+            throw new IllegalStateException("trait is already at max level");
         }
 
         onLevelUp(++level);

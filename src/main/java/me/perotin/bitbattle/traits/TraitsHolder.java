@@ -1,20 +1,24 @@
 package me.perotin.bitbattle.traits;
 
+import java.util.Collection;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.function.Function;
 
 public interface TraitsHolder {
 
-    <T extends Trait> void applyTrait(Function<UUID, Trait> traitCreator);
+    void applyTrait(Function<UUID, Trait> traitCreator);
 
-    <T extends Trait> void retractTrait(Class<T> traitType);
+    boolean retractTrait(Class<? extends Trait> traitType);
 
     void retractAllTraits();
 
-    <T extends LevelableTrait> void levelUpTrait(Class<T> traitType);
+    boolean hasTrait(Class<? extends Trait> traitType);
 
-    <T extends Trait> boolean hasTrait(Class<T> traitType);
+    //TODO: What if the specified traitType is not present?
+    void levelUpTrait(Class<? extends LevelableTrait> traitType);
 
     <T extends Trait> Optional<T> getTrait(Class<T> traitType);
+
+    Collection<? extends Trait> findAllTraits();
 }

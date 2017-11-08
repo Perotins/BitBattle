@@ -1,5 +1,6 @@
 package me.perotin.bitbattle;
 
+import me.perotin.bitbattle.files.BitFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /*
@@ -21,9 +22,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class BitBattle extends JavaPlugin{
 
 
+    // instance only used for files, because we're laazy and don't want to pass
+    // an instance around all the time :p
+    private static BitBattle instance;
+
     @Override
     public void onEnable(){
+        instance = this;
 
+
+    }
+
+    public static BitBattle getInstance(){
+        return instance;
     }
 
 }

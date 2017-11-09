@@ -1,4 +1,4 @@
-package me.perotin.bitbattle;
+package me.perotin.bitbattle.players;
 
 public interface BitPlayer {
 

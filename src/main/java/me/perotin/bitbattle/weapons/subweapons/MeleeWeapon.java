@@ -13,8 +13,13 @@ public class MeleeWeapon extends BitWeapon {
     TODO
     think of cool stuff we can make here
      */
-    public MeleeWeapon(String name, int baseDamage, int cooldown){
+
+    private String material;
+    public MeleeWeapon(String name, int baseDamage, int cooldown, String material){
         super(name, baseDamage, cooldown);
+
+        this.material = material;
+
     }
 
 

@@ -1,6 +1,5 @@
 package me.perotin.bitbattle;
 
-import me.perotin.bitbattle.files.BitFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /*
@@ -29,6 +28,8 @@ public class BitBattle extends JavaPlugin{
     @Override
     public void onEnable(){
         instance = this;
+
+
 
 
     }

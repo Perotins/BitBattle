@@ -7,7 +7,7 @@ import me.perotin.bitbattle.weapons.BitWeapon;
 
     Class for projectile weapons
  */
-public class ProjectileWeapon extends BitWeapon {
+public class RangedWeapon extends BitWeapon {
 
     /*
     TODO
@@ -27,7 +27,7 @@ public class ProjectileWeapon extends BitWeapon {
 
 
     // constructor with all fields
-    public ProjectileWeapon(String name, int cooldown, int baseDamage, int range, int roundsShotAfterFirstShot, int roundsShotAtOnce){
+    public RangedWeapon(String name, int cooldown, int baseDamage, int range, int roundsShotAfterFirstShot, int roundsShotAtOnce){
         super(name, baseDamage, cooldown);
 
         this.range = range;
@@ -36,7 +36,7 @@ public class ProjectileWeapon extends BitWeapon {
     }
 
     // default constructor i/e first used
-    public ProjectileWeapon(String name, int cooldown, int baseDamage){
+    public RangedWeapon(String name, int cooldown, int baseDamage){
         super(name, baseDamage, cooldown);
 
         // change this to pull from a file so user can configurate it

@@ -6,8 +6,8 @@ public abstract class AbstractLevelableTrait extends AbstractTrait implements Le
     private int level;
     private final int maxLevel;
 
-    protected AbstractLevelableTrait(UUID playerId, int maxLevel) {
-        super(playerId);
+    protected AbstractLevelableTrait(UUID playerId, String name, int maxLevel) {
+        super(playerId, name);
         this.level = 1;
         this.maxLevel = maxLevel;
     }

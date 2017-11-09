@@ -1,6 +1,8 @@
 package me.perotin.bitbattle.weapons;
 
 
+import java.util.HashMap;
+
 /*
     Created 11/05/17 by Perotin
 
@@ -29,6 +31,8 @@ public  class BitWeapon {
     @cooldown until the weapon can be used again
      */
     private int cooldown;
+
+
 
 
     // default weapon constructor, pull from config so they can customize the defaults

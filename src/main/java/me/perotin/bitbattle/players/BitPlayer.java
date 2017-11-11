@@ -9,5 +9,5 @@ public interface BitPlayer {
 
     double getMaxHealth();
 
-    void setMaxHealth();
+    void setMaxHealth(double amount);
 }

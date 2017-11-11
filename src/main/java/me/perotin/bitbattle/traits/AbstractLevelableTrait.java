@@ -1,13 +1,14 @@
 package me.perotin.bitbattle.traits;
 
-import java.util.UUID;
+import me.perotin.bitbattle.players.ArenaPlayer;
+
 
 public abstract class AbstractLevelableTrait extends AbstractTrait implements LevelableTrait {
     private int level;
     private final int maxLevel;
 
-    protected AbstractLevelableTrait(UUID playerId, String name, int maxLevel) {
-        super(playerId, name);
+    protected AbstractLevelableTrait(ArenaPlayer player, String name, int maxLevel) {
+        super(player, name);
         this.level = 1;
         this.maxLevel = maxLevel;
     }

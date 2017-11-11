@@ -1,15 +1,16 @@
 package me.perotin.bitbattle.traits;
 
-import java.util.UUID;
+import me.perotin.bitbattle.players.ArenaPlayer;
+
 
 public abstract class AbstractTrait implements Trait {
-    protected final UUID playerId;
+    protected final ArenaPlayer player;
 
     protected final String name;
 
 
-    protected AbstractTrait(UUID playerId, String name) {
-        this.playerId = playerId;
+    protected AbstractTrait(ArenaPlayer player, String name) {
+        this.player = player;
 
         this.name = name;
     }

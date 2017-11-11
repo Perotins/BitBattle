@@ -1,5 +1,9 @@
 package me.perotin.bitbattle;
 
+import me.perotin.bitbattle.players.ArenaPlayer;
+import me.perotin.bitbattle.weapons.subweapons.MeleeWeapon;
+import me.perotin.bitbattle.weapons.subweapons.RangedWeapon;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /*
@@ -28,6 +32,7 @@ public class BitBattle extends JavaPlugin{
     @Override
     public void onEnable(){
         instance = this;
+
 
 
 
